@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bazario - Early Access</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f2f6ff, #eaf0ff);
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
       color: #1a1a1a;
+      overflow-x: hidden;
     }
 
     .container {
@@ -22,35 +25,52 @@
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
       color: #003366;
     }
 
     p.sub {
       font-size: 1.2rem;
-      margin-bottom: 30px;
+      color: #444;
+      margin-bottom: 35px;
     }
 
     .features {
       text-align: left;
-      margin: 30px 0;
+      margin: 40px auto;
+      padding-left: 0;
+      list-style: none;
+      max-width: 450px;
     }
 
     .features li {
-      font-size: 1rem;
-      margin-bottom: 10px;
-      list-style: none;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
       position: relative;
-      padding-left: 20px;
+      padding-left: 50px;
+      color: #222;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease;
     }
 
-    .features li::before {
-      content: "\2713";
-      color: #009688;
-      font-weight: bold;
+    .features li:hover {
+      color: #00796b;
+    }
+
+    .features .emoji {
       position: absolute;
       left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.8rem;
+      animation: bounce 2.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(-50%) translateY(0); }
+      50% { transform: translateY(-50%) translateY(-6px); }
     }
 
     form {
@@ -59,34 +79,35 @@
 
     input,
     button {
-      padding: 12px;
+      padding: 14px;
       font-size: 1rem;
       margin-top: 10px;
       width: 100%;
       max-width: 400px;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
 
     input {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     button {
       background-color: #009688;
       color: white;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s;
     }
 
     button:hover {
       background-color: #00796b;
+      transform: scale(1.02);
     }
 
     .referral {
-      margin-top: 25px;
-      font-size: 0.95rem;
+      margin-top: 30px;
+      font-size: 1rem;
     }
 
     .referral a {
@@ -96,35 +117,93 @@
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       font-size: 0.85rem;
-      color: #666;
+      color: #777;
+    }
+
+    .success-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .success-content {
+      background: #fff;
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 12px;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .success-content h2 {
+      color: #009688;
+      margin-bottom: 10px;
+    }
+
+    .success-content p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .success-content a {
+      display: inline-block;
+      background-color: #003366;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .success-content a:hover {
+      background-color: #002244;
+    }
+
+    .icon-emoji {
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>Start Earning Online with Zero Investment</h1>
+    <h1>🚀 Start Earning Online with Zero Investment</h1>
     <p class="sub">Early Access to the Future of AI Commerce</p>
 
-    <ul class="features">
-      <li>No coding. No capital. No inventory.</li>
-      <li>Earn through affiliate marketing & dropshipping.</li>
-      <li>AI-powered store setup in minutes.</li>
+    <ul class="features" aria-label="Key features">
+      <li><span class="emoji">📊</span> No coding. No capital. No inventory.</li>
+      <li><span class="emoji">💰</span> Earn through affiliate marketing & dropshipping.</li>
+      <li><span class="emoji">🤖</span> AI-powered store setup in minutes.</li>
     </ul>
 
     <form id="signup-form">
       <input type="email" name="email" placeholder="Enter your email address" required />
       <input type="text" name="whatsapp" placeholder="WhatsApp number (optional)" />
-      <button type="submit">Get Early Access</button>
+      <button type="submit">✨ Get Early Access</button>
     </form>
 
     <div class="referral">
-      <p>🎁 <strong>Get more perks</strong> by <a href="https://pages.viral-loops.com/bazario-early-access-qrisv8ch"
-          target="_blank">inviting your friends</a></p>
-      <p>🔥 <a href="https://pages.viral-loops.com/bazario-early-access-qrisv8ch" target="_blank">Join the referral
-          leaderboard</a></p>
+      <p>🎁 <strong>Get more perks</strong> by <a href="https://pages.viral-loops.com/bazario-early-access-qrisv8ch" target="_blank">inviting your friends</a></p>
+      <p>🔥 <a href="https://pages.viral-loops.com/bazario-early-access-qrisv8ch" target="_blank">Join the referral leaderboard</a></p>
+    </div>
+  </div>
+
+  <div class="success-modal" id="successModal">
+    <div class="success-content">
+      <div class="icon-emoji">🎉</div>
+      <h2>You're In!</h2>
+      <p>Thanks for signing up. Share your link and unlock exciting rewards!</p>
+      <a href="https://pages.viral-loops.com/bazario-early-access-qrisv8ch" target="_blank">Invite Friends</a>
     </div>
   </div>
 
@@ -139,9 +218,10 @@
     VL('init', { campaignId: 'aBfoDeSNl6M4exB7yEUFihC4EYY' });
   </script>
 
-  <!-- Form Submit Logic (Zapier + Viral Loops) -->
+  <!-- Form Submit Logic (Zapier + Viral Loops + Modal) -->
   <script>
     const form = document.getElementById("signup-form");
+    const modal = document.getElementById("successModal");
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -166,11 +246,17 @@
         }
       });
 
-      // 3. Show confirmation
-      alert("Thanks for signing up! 🎉 You’re in. Share your link to unlock rewards!");
+      // 3. Show modal
+      modal.style.display = "flex";
       form.reset();
+    });
+
+    // Close modal on outside click
+    window.addEventListener("click", function (e) {
+      if (e.target == modal) {
+        modal.style.display = "none";
+      }
     });
   </script>
 </body>
-
 </html>
