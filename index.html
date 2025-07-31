@@ -1,262 +1,710 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bazario - Early Access</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #fdfbfb, #ebedee);
-      color: #1a1a1a;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
-      color: #003366;
-    }
-
-    p.sub {
-      font-size: 1.2rem;
-      color: #444;
-      margin-bottom: 35px;
-    }
-
-    .features {
-      text-align: left;
-      margin: 40px auto;
-      padding-left: 0;
-      list-style: none;
-      max-width: 450px;
-    }
-
-    .features li {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      position: relative;
-      padding-left: 50px;
-      color: #222;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      transition: color 0.3s ease;
-    }
-
-    .features li:hover {
-      color: #00796b;
-    }
-
-    .features .emoji {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.8rem;
-      animation: bounce 2.5s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(-50%) translateY(0); }
-      50% { transform: translateY(-50%) translateY(-6px); }
-    }
-
-    form {
-      margin-top: 30px;
-    }
-
-    input,
-    button {
-      padding: 14px;
-      font-size: 1rem;
-      margin-top: 10px;
-      width: 100%;
-      max-width: 400px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    input {
-      margin-bottom: 12px;
-    }
-
-    button {
-      background-color: #009688;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s;
-    }
-
-    button:hover {
-      background-color: #00796b;
-      transform: scale(1.02);
-    }
-
-    .referral {
-      margin-top: 30px;
-      font-size: 1rem;
-    }
-
-    .referral a {
-      color: #003366;
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.85rem;
-      color: #777;
-    }
-
-    .success-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    .success-content {
-      background: #fff;
-      padding: 40px 30px;
-      text-align: center;
-      border-radius: 12px;
-      max-width: 400px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    .success-content h2 {
-      color: #009688;
-      margin-bottom: 10px;
-    }
-
-    .success-content p {
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .success-content a {
-      display: inline-block;
-      background-color: #003366;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .success-content a:hover {
-      background-color: #002244;
-    }
-
-    .icon-emoji {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <h1>🚀 Start Earning Online with Zero Investment</h1>
-    <p class="sub">Early Access to the Future of AI Commerce</p>
-
-    <ul class="features" aria-label="Key features">
-      <li><span class="emoji">📊</span> No coding. No capital. No inventory.</li>
-      <li><span class="emoji">💰</span> Earn through affiliate marketing & dropshipping.</li>
-      <li><span class="emoji">🤖</span> AI-powered store setup in minutes.</li>
-    </ul>
-
-    <form id="signup-form">
-      <input type="email" name="email" placeholder="Enter your email address" required />
-      <input type="text" name="whatsapp" placeholder="WhatsApp number (optional)" />
-      <button type="submit">✨ Get Early Access</button>
-    </form>
-
-    <div class="referral">
-      <p>🎁 <strong>Get more perks</strong> by <a href="https://pages.viral-loops.com/bazario-early-access-qrisv8ch" target="_blank">inviting your friends</a></p>
-      <p>🔥 <a href="https://pages.viral-loops.com/bazario-early-access-qrisv8ch" target="_blank">Join the referral leaderboard</a></p>
-    </div>
-  </div>
-
-  <div class="success-modal" id="successModal">
-    <div class="success-content">
-      <div class="icon-emoji">🎉</div>
-      <h2>You're In!</h2>
-      <p>Thanks for signing up. Share your link and unlock exciting rewards!.</p>
-      <a href="https://pages.viral-loops.com/bazario-early-access-qrisv8ch" target="_blank">Invite Friends</a>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Bazario. All rights reserved.
-  </footer>
-
-  <!-- Viral Loops Script -->
-  <script src="https://app.viral-loops.com/vl/vl.js"></script>
-  <script>
-    window.VL = window.VL || function () { (VL.q = VL.q || []).push(arguments); };
-    VL('init', { campaignId: 'aBfoDeSNl6M4exB7yEUFihC4EYY' });
-  </script>
-
-  <!-- Form Submit Logic (Zapier + Viral Loops + Modal) -->
-  <script>
-    const form = document.getElementById("signup-form");
-    const modal = document.getElementById("successModal");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const email = form.elements["email"].value;
-      const whatsapp = form.elements["whatsapp"].value;
-
-      // 1. Send to Zapier
-      fetch("https://hooks.zapier.com/hooks/catch/23665835/u39bxl0/", {
-        method: "POST",
-        body: new URLSearchParams({ email, whatsapp }),
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
-      });
-
-      // 2. Track referral in Viral Loops
-      VL('participate', {
-        email: email,
-        firstName: '',
-        lastName: '',
-        customFields: {
-          whatsapp: whatsapp
-        }
-      });
-
-      // 3. Show modal
-      modal.style.display = "flex";
-      form.reset();
-    });
-
-    // Close modal on outside click
-    window.addEventListener("click", function (e) {
-      if (e.target == modal) {
-        modal.style.display = "none";
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bazario – Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    });
-  </script>
-</body>
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(135deg, #2d3fef, #7a80fa);
+        color: white;
+        padding: 80px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      header .left {
+        flex: 1;
+        min-width: 280px;
+        padding-left: 80px;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+      }
+
+      header .right {
+        flex: 1;
+        text-align: center;
+        min-width: 280px;
+      }
+
+      header .right img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .cta-button {
+        background-color: #ffffff;
+        color: #2d3fef;
+        padding: 14px 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: #e3e7ff;
+      }
+
+      section {
+        padding: 70px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        color: #2d3fef;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .features-grid,
+      .benefits-grid,
+      .faq {
+        display: grid;
+        gap: 30px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature,
+      .faq-item {
+        background-color: #f5f7ff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .feature img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        margin: 10px auto;
+        display: block;
+      }
+
+      .benefit {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        background-color: #f5f7ff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .benefit img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      .feature h3,
+      .benefit h3,
+      .faq-item h4 {
+        color: #1e1e1e;
+        margin-bottom: 10px;
+      }
+
+      .testimonials {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .testimonial {
+        position: relative;
+        background-color: #f5f7ff;
+        padding: 20px;
+        border-radius: 20px;
+        font-style: italic;
+        max-width: 300px;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .testimonial::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 30px;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #f5f7ff;
+      }
+
+      .testimonial strong {
+        display: block;
+        margin-top: 15px;
+        font-style: normal;
+        color: #2d3fef;
+      }
+
+      .cta-visuals {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 60px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        text-align: center;
+      }
+
+      .cta-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: fadeInOut 3s infinite;
+      }
+
+      .cta-step:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .cta-step:nth-child(2) {
+        animation-delay: 0.5s;
+      }
+
+      .cta-step:nth-child(3) {
+        animation-delay: 1s;
+      }
+
+      /* Texte sous l'image et en noir */
+      .cta-step h3 {
+        font-size: 1.5rem;
+        margin-top: 12px; /* espace au-dessus du texte */
+        color: #000000; /* texte noir */
+      }
+
+      .cta-step img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .benefit img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .cta-step img:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes fadeInOut {
+        0%, 100% {
+          opacity: 0.3;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.15);
+        }
+      }
+
+      footer {
+        background-color: #2d3fef;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      
+    .product-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
+
+    .commission-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #2d3fef;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card-content {
+      padding: 15px;
+    }
+
+    .product-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #f0f2fa;
+      color: #2d3fef;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 8px;
+    }
+
+    .stars {
+      color: #ffcc00;
+      font-size: 14px;
+    }
+
+
+
+    .rating {
+      color: #888;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+
+    .product-description {
+      color: #555;
+      font-size: 13px;
+      margin: 8px 0 16px;
+    }
+
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .earn {
+      font-size: 14px;
+      color: #000;
+    }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="left">
+        <h1>Welcome to Bazario</h1>
+        <p>Turn your followers, friends, or free time into income. With Bazario, anyone can earn commissions — no inventory, no upfront costs, no hassle. Just share, sell, and earn.</p>
+        <button class="cta-button">Join the waiting list, it's free!!</button>
+      </div>
+      <div class="right">
+        <img src="hero-placeholder.png" alt="Bazario Hero Image" />
+      </div>
+    </header>
+
+    <section>
+      <h2>How It Works</h2>
+
+      <!-- Séquence animée Click Share Earn sous le titre, texte sous images et en noir -->
+      <div class="cta-visuals">
+        <div class="cta-step">
+          <img src="click1.png" alt="Click Icon" />
+          <h3>Click</h3>
+        </div>
+        <div class="cta-step">
+          <img src="seq_share1.png" alt="Share Icon" />
+          <h3>Share</h3>
+        </div>
+        <div class="cta-step">
+          <img src="seq_earn1.png" alt="Earn Icon" />
+          <h3>Earn</h3>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature">
+          <img src="signup1.png" alt="Pick Products" />
+          <h3>1. Pick Products</h3>
+          <p>Browse our dropshipping and affiliate catalogs — thousands of items, curated and ready to sell.</p>
+        </div>
+        <div class="feature">
+          <img src="share1.png" alt="Share Store or Link" />
+          <h3>2. Share Your Store or Link</h3>
+          <p>Use our AI-powered landing page builder or just copy your affiliate link. Share it on socials, blogs, or chats.</p>
+        </div>
+        <div class="feature">
+          <img src="earn1.png" alt="Earn Commission" />
+          <h3>3. Earn Commission</h3>
+          <p>You get paid for every sale. We take care of payments, shipping, and support.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section style="max-width: 100%; padding: 70px 40px;">
+      <h2>A well-stocked product catalog</h2>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 40px;">
+
+        <!-- Première rangée de 5 produits -->
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">8% commission</div>
+          <img src="bluetooth.jpg" alt="Bluetooth Speaker">
+          <div class="product-card-content">
+            <div class="product-title">
+              Bluetooth Speaker
+              <span class="badge">Electronics</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.6)</span>
+            </div>
+            <p class="product-description">
+              Portable Bluetooth speaker with 360-degree sound and 12-hour battery life.
+            </p>
+            <div class="product-footer">
+              <span>$49.99</span>
+              <span class="earn">Earn $4.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">10% commission</div>
+          <img src="Anti-Aging.jpg" alt="Anti-Aging Face Serum">
+          <div class="product-card-content">
+            <div class="product-title">
+              Anti-Aging Face Serum
+              <span class="badge">Beauty & Skincare</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.8)</span>
+            </div>
+            <p class="product-description">
+              Vitamin C & Hyaluronic Acid serum for glowing, youthful skin. Dermatologist approved.
+            </p>
+            <div class="product-footer">
+              <span>$29.99</span>
+              <span class="earn">Earn $3.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">12% commission</div>
+          <img src="LED.jpg" alt="Smart LED Light Strip">
+          <div class="product-card-content">
+            <div class="product-title">
+              Smart LED Light Strip
+              <span class="badge">Home Decor</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.5)</span>
+            </div>
+            <p class="product-description">
+              16 million colors, app-controlled LED light strip with music sync. Perfect for any room.
+            </p>
+            <div class="product-footer">
+              <span>$24.99</span>
+              <span class="earn">Earn $3.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">10% commission</div>
+          <img src="Wireless.webp" alt="Wireless Charging Stand">
+          <div class="product-card-content">
+            <div class="product-title">
+              Wireless Charging Stand
+              <span class="badge">Tech Accessories</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.4)</span>
+            </div>
+            <p class="product-description">
+              Fast-charging 3-in-1 dock for phone, earbuds, and smartwatch. Sleek and efficient
+            </p>
+            <div class="product-footer">
+              <span>$39.99</span>
+              <span class="earn">Earn $4.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">9% commission</div>
+          <img src="Oil.jpg" alt="Essential Oil Diffuser">
+          <div class="product-card-content">
+            <div class="product-title">
+              Essential Oil Diffuser
+              <span class="badge">Home Wellness</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.7)</span>
+            </div>
+            <p class="product-description">
+              Aromatherapy diffuser with 7 LED colors and automatic shut-off.
+            </p>
+            <div class="product-footer">
+              <span>$34.99</span>
+              <span class="earn">Earn $3.00</span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Deuxième rangée de 8 produits -->
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">13% commission</div>
+          <img src="Makeup.webp" alt="Reusable Makeup Remover Pads">
+          <div class="product-card-content">
+            <div class="product-title">
+              Reusable Makeup Remover Pads
+              <span class="badge">Eco Beauty</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.5)</span>
+            </div>
+            <p class="product-description">
+              Soft, washable bamboo cotton pads to replace disposable cotton rounds.
+            </p>
+            <div class="product-footer">
+              <span>$14.99</span>
+              <span class="earn">Earn $2.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">10% commission</div>
+          <img src="Foldable.webp" alt="Foldable Laptop Stand">
+          <div class="product-card-content">
+            <div class="product-title">
+              Foldable Laptop Stand
+              <span class="badge">Office Tech</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.6)</span>
+            </div>
+            <p class="product-description">
+              Ergonomic, adjustable aluminum stand for laptops up to 17 inches.
+            </p>
+            <div class="product-footer">
+              <span>$27.99</span>
+              <span class="earn">Earn $2.80</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">10% commission</div>
+          <img src="AirFryer.jpg" alt="Air Fryer 3.5L">
+          <div class="product-card-content">
+            <div class="product-title">
+              Air Fryer 3.5L
+              <span class="badge">Kitchen Appliances</span>
+            </div>
+            <div>
+              <span class="stars">★★★★★</span><span class="rating">(4.8)</span>
+            </div>
+            <p class="product-description">
+              Crispy, oil-free cooking with digital control panel and multiple presets.
+            </p>
+            <div class="product-footer">
+              <span>$79.99</span>
+              <span class="earn">Earn $8.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">15% commission</div>
+          <img src="FacialCleansing.jpg" alt="Electric Facial Cleansing Brush">
+          <div class="product-card-content">
+            <div class="product-title">
+              Electric Facial Cleansing Brush
+              <span class="badge">Beauty Tools</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.6)</span>
+            </div>
+            <p class="product-description">
+              Waterproof silicone brush for deep cleansing and gentle exfoliation.
+            </p>
+            <div class="product-footer">
+              <span>$19.99</span>
+              <span class="earn">Earn $3.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="position: relative;">
+          <div class="commission-badge">10% commission</div>
+          <img src="Projector.jpg" alt="Mini Projector">
+          <div class="product-card-content">
+            <div class="product-title">
+              Mini Projector
+              <span class="badge">Mini Projector</span>
+            </div>
+            <div>
+              <span class="stars">★★★★☆</span><span class="rating">(4.4)</span>
+            </div>
+            <p class="product-description">
+              Portable HD projector compatible with phones, laptops, and gaming consoles.
+            </p>
+            <div class="product-footer">
+              <span>$89.99</span>
+              <span class="earn">Earn $9.00</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Benefits</h2>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <img src="inventory1.png" alt="No Upfront Cost" />
+          <div>
+            <h3>No Upfront Cost</h3>
+            <p>Start with $0. We handle the hard stuff — inventory, fulfillment, payments.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <img src="ia.png" alt="Smart AI Tools" />
+          <div>
+            <h3>Smart AI Tools</h3>
+            <p>Let AI help you pick trending products, write your landing pages, and optimize your sales.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <img src="tel.png" alt="Mobile First" />
+          <div>
+            <h3>Mobile First</h3>
+            <p>Sell from anywhere — your phone is your storefront.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <img src="Zero_Tech.png" alt="Zero Tech Skills Needed" />
+          <div>
+            <h3>Zero Tech Skills Needed</h3>
+            <p>Our drag-and-drop builder is as easy as making a Canva post.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <img src="mondial.png" alt="Global Fulfillment" />
+          <div>
+            <h3>Global Fulfillment</h3>
+            <p>Products are shipped directly to your customers — no warehouse, no stress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Testimonials</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>“I earned my first $50 with Bazario — and I didn’t even need to buy anything.”</p>
+          <strong>– Ayesha, 22, Philippines</strong>
+        </div>
+        <div class="testimonial">
+          <p>“Bazario is perfect for students like me who want to make extra money online.”</p>
+          <strong>– Rohan, 19, India</strong>
+        </div>
+        <div class="testimonial">
+          <p>“As a small seller, it’s amazing to have affiliates promoting my brand without me spending on ads.”</p>
+          <strong>– Fatima, Dubai</strong>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h4>How do affiliates earn ?</h4>
+          <p>Share product links or your custom storefront. You earn a commission for every sale made through your links.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I get paid ?</h4>
+          <p>We support bank transfers, mobile wallets, and crypto. Payouts are weekly or monthly, depending on your region.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do I need any inventory or products ?</h4>
+          <p>Oui, l'inscription et l'utilisation de la plateforme sont 100% gratuites.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I sell my own products ?</h4>
+          <p>Yes, product owners can list their items, set commission rates, and let our affiliates do the selling.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What does it cost ?</h4>
+          <p>Bazario is free for the first 3 months. After that, choose a paid plan or continue with basic features.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Bazario. Tous droits réservés.</p>
+    </footer>
+  </body>
 </html>
